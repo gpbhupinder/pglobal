@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Define your custom values here */
+  --primary-color: red ;
+  --secondary-color: #2e1065;
+}
