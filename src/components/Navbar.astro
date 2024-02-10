@@ -16,7 +16,7 @@ import "../styles/global.css";
     <div class="flex space-x-3 md:order-2">
       <a
         href="tel:+919876407769"
-        class="bg-primary text-white hover:bg-blue-800 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
+        class="bg-primary text-white hover:bg-primaryhover font-medium rounded-lg text-sm px-4 py-2"
       >
         Call Us
       </a>
@@ -47,19 +47,19 @@ import "../styles/global.css";
       id="navbar-sticky"
     >
       <ul
-        class="flex flex-col font-medium bg-gray-50 rounded-lg md:bg-transparent md:flex-row md:space-x-8 md:border-0"
+        class="navigation flex flex-col font-medium bg-gray-50 rounded-lg md:bg-transparent md:flex-row md:space-x-8 md:border-0"
       >
         <li>
           <a
             href="/"
-            class="block rounded bg-blue-700 py-2 px-3 text-white md:bg-transparent md:text-blue-700"
+            class="block rounded bg-secondary py-2 px-3 md:bg-transparent active:text-secondary"
             >Home</a
           >
         </li>
         <li>
           <a
-            href="#"
-            class="block rounded py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700"
+            href="/about"
+            class="block rounded py-2 px-3 text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 active:text-secondary"
             >About</a
           >
         </li>
@@ -67,7 +67,7 @@ import "../styles/global.css";
           <button
             id="dropdownNavbarLink"
             data-dropdown-toggle="dropdownNavbar"
-            class="flex items-center w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:w-auto md:hover:bg-transparent md:border-0 md:hover:text-blue-700"
+            class="flex items-center w-full py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:w-auto md:hover:bg-transparent md:border-0 active:text-secondary"
           >
             Services
             <svg
@@ -102,7 +102,7 @@ import "../styles/global.css";
         <li>
           <a
             href="/contact"
-            class="block rounded py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700"
+            class="block rounded py-2 px-3 text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 active:text-secondary"
             >Contact</a
           >
         </li>
@@ -110,21 +110,21 @@ import "../styles/global.css";
     </div>
   </div>
 </nav>
-<div id="mobile-menu" class="hidden md:hidden">
+<div id="mobile-menu" class="hidden text-center md:hidden mt-24">
   <ul
-    class="flex flex-col font-medium bg-gray-50 rounded-lg md:bg-transparent md:flex-row md:space-x-8 md:border-0"
+    class="navigation flex flex-col font-medium rounded-lg md:bg-transparent md:flex-row md:space-x-8 md:border-0"
   >
     <li>
       <a
         href="/"
-        class="block rounded bg-blue-700 py-2 px-3 text-white md:bg-transparent md:text-blue-700"
+        class="block rounded py-2 px-3 text-gray-700 active:text-secondary md:bg-transparent"
         >Home</a
       >
     </li>
     <li>
       <a
-        href="#"
-        class="block rounded py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700"
+        href="/about"
+        class="block rounded py-2 px-3 text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 active:text-secondary"
         >About</a
       >
     </li>
@@ -132,7 +132,7 @@ import "../styles/global.css";
       <button
         id="mobileDropdownNavbarLink"
         data-dropdown-toggle="mobileDropdownNavbar"
-        class="flex items-center w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:w-auto md:hover:bg-transparent md:border-0 md:hover:text-blue-700"
+        class="flex items-center justify-center w-full py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:w-auto md:hover:bg-transparent md:border-0 active:text-secondary"
       >
         Services
         <svg
@@ -151,13 +151,13 @@ import "../styles/global.css";
 
       <div
         id="mobileDropdownNavbar"
-        class="z-10 hidden divide-y divide-gray-100 rounded-lg bg-white shadow w-44"
+        class="z-10 hidden divide-y divide-gray-100 rounded-lg text-center bg-white shadow"
       >
         <ul aria-labelledby="dropdownLargeButton">
           <li>
             <a
               href="/aviation-maintenance-support"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:text-secondary"
               >Aviation Maintenance Support</a
             >
           </li>
@@ -167,7 +167,7 @@ import "../styles/global.css";
     <li>
       <a
         href="/contact"
-        class="block rounded py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700"
+        class="block rounded py-2 px-3 text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 active:text-secondary"
         >Contact</a
       >
     </li>
@@ -194,5 +194,20 @@ import "../styles/global.css";
 
   mobileDropdownButton.addEventListener("click", () => {
     mobileDropdownMenu.classList.toggle("hidden");
+  });
+
+  // Active Link
+  // Get all navigation links
+  const navLinks = document.querySelectorAll("#navigation a");
+
+  // Add an event listener to each link
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      // Remove the 'active' class from all links
+      navLinks.forEach((link) => link.classList.remove("active"));
+
+      // Add the 'active' class to the clicked link
+      event.target.classList.add("active");
+    });
   });
 </script>
