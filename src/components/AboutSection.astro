@@ -1,12 +1,18 @@
+---
+import { Image } from "astro:assets";
+---
+
 <section>
   <div
     class="justify-center items-center flex-1 max-w-screen-xl px-6 p-6 mx-auto text-center font-poppins"
   >
     <div class="flex flex-wrap">
       <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-        <img
-          src="about.jpg"
-          alt=""
+        <Image
+          src="/about.jpg"
+          alt="about us"
+          width="450"
+          height="450"
           class="relative z-40 object-cover w-full h-96"
         />
       </div>
