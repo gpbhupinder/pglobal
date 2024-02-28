@@ -2,6 +2,7 @@
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import AboutSection from "../components/AboutSection.astro";
+import "@fontsource/merriweather";
 ---
 
 <html lang="en">
@@ -18,24 +19,25 @@ import AboutSection from "../components/AboutSection.astro";
     </header>
 
     <main>
-	<section class="bg-gray-50">
-  <div
-    class="justify-center items-center flex-1 max-w-screen-xl px-6 p-6 mx-auto mt-24 text-center font-poppins"
-  >
-    <div class="px-4 mb-10 md:text-center md:mb-10 md:mt-10">
-      <p class="mb-2 text-lg font-semibold text-secondary">About Us</p>
-      <h1 class="pb-2 text-2xl font-bold text-gray-800 md:text-4xl">
-        What we do
-      </h1>
-      <div class="flex w-32 mt-1 mb-6 overflow-hidden rounded mx-auto md:mb-14">
-        <div class="flex-1 h-2 bg-secondaryhover"></div>
-        <div class="flex-1 h-2 bg-secondary"></div>
-        <div class="flex-1 h-2 bg-secondaryhover"></div>
-      </div>
-    </div>
-    
-  </div>
-</section>
+      <section class="bg-gray-50">
+        <div
+          class="justify-center items-center flex-1 max-w-screen-xl px-6 p-6 mx-auto mt-24 text-center font-poppins"
+        >
+          <div class="px-4 mb-10 md:text-center md:mb-10 md:mt-10">
+            <p class="mb-2 text-lg font-semibold text-secondary">About Us</p>
+            <h1 class="pb-2 text-2xl font-bold text-gray-800 md:text-4xl">
+              What we do
+            </h1>
+            <div
+              class="flex w-32 mt-1 mb-6 overflow-hidden rounded mx-auto md:mb-14"
+            >
+              <div class="flex-1 h-2 bg-secondaryhover"></div>
+              <div class="flex-1 h-2 bg-secondary"></div>
+              <div class="flex-1 h-2 bg-secondaryhover"></div>
+            </div>
+          </div>
+        </div>
+      </section>
       <AboutSection />
     </main>
     <hr
