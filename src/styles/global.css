@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap')
 :root {
   /* Define your custom values here 
 
@@ -19,4 +19,8 @@
   --secondary-color-hover: #483D8F;
   --tertiary-color: #1e40af;
   --light-bg: #dee9f4;
+}
+
+.bg-wallnut{
+	background-image: url("../public/wallnuts-full-bg.jpg");
 }

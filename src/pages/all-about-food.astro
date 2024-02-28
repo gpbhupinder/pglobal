@@ -1,0 +1,42 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import AboutSection from "../components/AboutSection.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>All about food</title>
+  </head>
+  <body>
+    <header>
+      <Navbar />
+    </header>
+
+    <main>
+	<section class="bg-wallnut h-100">
+  <div
+    class="justify-center items-center flex-1 max-w-screen-xl px-6 p-6 mx-auto mt-24 text-center font-poppins"
+  >
+    <div class="px-4 mb-10 md:text-center md:mb-10 md:mt-10">
+      <p class="mb-2 text-lg font-semibold text-secondary">About Us</p>
+      <h1 class="pb-2 text-2xl font-bold text-gray-800 md:text-4xl">
+        All about food
+      </h1>
+      <div class="flex w-32 mt-1 mb-6 overflow-hidden rounded mx-auto md:mb-14">
+        <div class="flex-1 h-2 bg-secondaryhover"></div>
+        <div class="flex-1 h-2 bg-secondary"></div>
+        <div class="flex-1 h-2 bg-secondaryhover"></div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+      
+    </main>    
+  </body>
+</html>
