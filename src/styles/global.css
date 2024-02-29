@@ -24,7 +24,9 @@
 .bg-wallnut{
 	background-image: url("/wallnuts-full-bg.jpg");
 }
-
+.bg-globe{
+	background: url("/globe-bg.jpg") no-repeat;
+}
 h1, h2 {
   font-family: merriweather;
   text-transform: uppercase;
