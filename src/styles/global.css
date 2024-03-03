@@ -5,13 +5,12 @@
 :root {
   /* Define your custom values here 
 
-  --jordy-blue: #8EB0E0ff;
---white: #FFFFFFff;
---white-2: #FFFFFFff;
---primary-color: #C50514ff;
+ --primary-color: #C50514ff;
   --primary-color-hover: #EF0619;
   --secondary-color: #342C66ff;
   --secondary-color-hover: #483D8F;
+  --tertiary-color: #1e40af;
+  --light-bg: #dee9f4;
  */
   --primary-color: #C50514ff;
   --primary-color-hover: #EF0619;
