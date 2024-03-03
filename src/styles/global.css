@@ -30,3 +30,25 @@ h1, h2 {
   font-family: merriweather;
   text-transform: uppercase;
 }
+
+/* Hero classes */
+
+.carousel {
+  
+  
+  overflow: hidden;
+}
+
+.carousel img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  opacity: 0;
+  transition: transform 2s, opacity 1.25s;
+}
+
+.carousel img.active {
+  opacity: 1;
+  transform: scale(1.25);  
+}

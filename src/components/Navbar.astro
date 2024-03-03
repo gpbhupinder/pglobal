@@ -4,12 +4,13 @@ import "../styles/global.css";
 
 <nav class="fixed top-0 left-0 z-50 w-full bg-white border-b border-gray-200">
   <div
-    class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto py-4"
+    class="flex flex-wrap items-center justify-between max-w-screen-2xl px-4 lg:px-8 mx-auto py-4"
   >
+    <!-- Logo -->
     <a href="/" class="flex items-center space-x-3">
       <img src="/logo.png" alt="Logo" class="h-20" />
     </a>
-
+    <!-- Call Us -->
     <div class="flex space-x-3 md:order-2">
       <a
         href="tel:+919876407769"
@@ -38,13 +39,13 @@ import "../styles/global.css";
         </svg>
       </button>
     </div>
-
+    <!-- Menu Links -->
     <div
-      class="hidden justify-between mt-4 space-y-4 md:mt-0 md:flex md:space-y-0 md:space-x-8 md:order-1"
+      class="hidden justify-between mt-4 space-y-4 md:mt-0 md:flex md:space-y-0 md:space-x-2 xl:space-x-6 md:order-1"
       id="navbar-sticky"
     >
       <ul
-        class="navigation flex flex-col font-medium bg-gray-50 rounded-lg md:bg-transparent md:flex-row md:space-x-8 md:border-0"
+        class="navigation flex flex-col font-medium bg-gray-50 rounded-lg md:bg-transparent md:flex-row md:space-x-2 xl:space-x-6 md:border-0"
       >
         <li>
           <a
@@ -85,7 +86,8 @@ import "../styles/global.css";
     </div>
   </div>
 </nav>
-<div id="mobile-menu" class="hidden text-center md:hidden mt-24">
+<!-- Mobile menu -->
+<div id="mobile-menu" class="hidden text-center md:hidden mt-32">
   <ul
     class="navigation flex flex-col font-medium rounded-lg md:bg-transparent md:flex-row md:space-x-8 md:border-0"
   >
