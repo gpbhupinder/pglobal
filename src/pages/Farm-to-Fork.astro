@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import AboutSection from "../components/AboutSection.astro";
+import Nutrition from "../components/Nutrition.astro";
 import "@fontsource/merriweather";
 ---
 
@@ -49,6 +50,7 @@ import "@fontsource/merriweather";
           </div>
         </div>
       </section>
+      <Nutrition />
       <section>
         <div
           class="justify-center items-center flex-1 max-w-screen-2xl px-6 p-6 mx-auto font-poppins"
@@ -113,122 +115,6 @@ import "@fontsource/merriweather";
           </div>
         </div>
       </section>
-
-      <!-- <section>
-  <div
-    class="justify-center items-center flex-1 max-w-screen-2xl px-6 p-6 mx-auto text-center font-poppins"
-  >
-    <div class="flex flex-wrap">
-      <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-        <Image
-          src="/about.jpg"
-          alt="about us"
-          width="450"
-          height="450"
-          class="relative z-40 object-cover w-full h-96"
-        />
-      </div>
-      <div class="w-full text-start px-4 mb-10 lg:w-1/2 lg:mb-0">
-        <h2
-          class="py-3 pl-2 mb-4 text-2xl font-bold text-gray-700 border-l-4 border-secondary"
-        >
-          We are providing a better facility
-        </h2>
-        <p class="mb-4 text-base leading-7 text-gray-500">
-          Phoenix Global is based in New Delhi, India with expertise in the
-          representation, marketing, and Liaison of Industry Leaders from across
-          the globe for the verticals we operate.
-        </p>
-        <p class="mb-4 text-base leading-7 text-gray-500">
-          We add immense value to our global partners as an importer,
-          distributor, and indenting agent for a diverse array of their
-          products. At Phoenix Global we consider our customers as our growth
-          partners and go the extra mile to delight our valued clientele.
-        </p>
-        <p class="mb-4 text-base leading-7 text-gray-500">
-          Phoenix Global is diversified into aircraft parts and support and has
-          expanded its footprint to enable food products direct from farms to
-          fork.
-        </p>
-        <p class="mb-4 text-base leading-7 text-gray-500">
-          With our maiden warehouse in India’s capital New Delhi, minutes away
-          from the Indira Gandhi International Airport, and located near dry
-          ports to reach out anywhere in the country we cater to the
-          ever-growing aviation and food industry.
-        </p>
-        <p class="mb-4 text-base leading-7 text-gray-500">
-          We provide our suppliers with a stable local platform for their
-          products, allowing them to channel their efforts towards innovation
-          and product development while entrusting their marketing efforts to
-          us.
-        </p>
-        <p class="mb-4 text-base leading-7 text-gray-500">
-          Our company is renowned for delivering exceptional and ethical
-          services to our business associates.
-        </p>
-        <ul class="mb-10">
-          <li class="flex items-center mb-4 text-base text-gray-600">
-            <span class="mr-3 text-secondary">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="w-5 h-5 bi bi-patch-check-fill"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"
-                ></path>
-              </svg>
-            </span>
-            Lorem ipsum dolor sit amet, consectetur domino act
-          </li>
-          <li class="flex items-center mb-4 text-base text-gray-600">
-            <span class="mr-3 text-secondary">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="w-5 h-5 bi bi-patch-check-fill"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"
-                ></path>
-              </svg>
-            </span>
-            eli orem ipsum dolor sit amet, consectetur advice
-          </li>
-          <li class="flex items-center mb-4 text-base text-gray-600">
-            <span class="mr-3 text-secondary">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="w-5 h-5 bi bi-patch-check-fill"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"
-                ></path>
-              </svg>
-            </span>
-            Iron man ipsum dolor sit amet, consectetur adipiscing
-          </li>
-        </ul>
-        <a
-          href="#"
-          class="px-4 py-3 text-secondary transition-all transform border border-secondary hover:bg-secondaryhover hover:text-gray-100"
-        >
-          Discover more
-        </a>
-      </div>
-    </div>
-  </div>
-</section> -->
     </main>
     <hr
       class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25"
