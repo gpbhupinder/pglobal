@@ -56,3 +56,15 @@ h1, h2 {
 .glow-text {
   text-shadow: 0 0 3px #342C66ff, 0 0 3px #342C66ff;
 }
+
+/* Hero Text effect */
+
+/* Initial style */
+.hero-text {
+  @apply transform scale-150 opacity-0 transition duration-1000;
+}
+
+/* Animate styles */
+.hero-text.animate {
+  @apply scale-100 opacity-100;
+}

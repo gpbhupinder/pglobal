@@ -10,7 +10,7 @@
         class="absolute flex flex-wrap flex-col justify-center items-center mt-24 mx-auto left-0 right-0 width-50 translate-x-50% text-center"
       >
         <h1
-          class="mt-8 mb-12 text-white text-4xl font-bold md:text-6xl xl:text-7xl text-shadow-lg glow-text"
+          class="mt-8 hero-text mb-12 text-white text-4xl font-bold md:text-6xl xl:text-7xl text-shadow-lg glow-text"
         >
           Your Quality sourcing <br /><span>Expert Partner</span>
         </h1>
@@ -36,6 +36,10 @@
 </section>
 <!-- Carousel Script -->
 <script>
+  window.addEventListener("load", function () {
+    const heroText = document.querySelector(".hero-text");
+    heroText.classList.add("animate");
+  });
   let images = document.querySelectorAll(".carousel img");
   let index = 0;
 
@@ -49,4 +53,6 @@
   }
 
   setInterval(nextImage, 2000);
+
+  //text script
 </script>
