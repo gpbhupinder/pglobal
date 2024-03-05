@@ -2,7 +2,7 @@
   <div class="container mt-28 max-w-full mx-auto text-center">
     <div class="carousel w-auto text-center relative">
       <!-- Carousel Images -->
-      <img src="h1.png" class="active w-full h-full object-cover" />
+      <img src="h1.png" class="w-full h-full object-cover" />
       <img src="h3.jpg" class="w-full h-full object-cover" />
       <img src="wallnuts-full-bg.jpg" class="w-full h-full object-cover" />
       <!-- Carousel Overlay Text  -->
@@ -39,20 +39,20 @@
   window.addEventListener("load", function () {
     const heroText = document.querySelector(".hero-text");
     heroText.classList.add("animate");
-  });
-  let images = document.querySelectorAll(".carousel img");
-  let index = 0;
-
-  function nextImage() {
-    images[index].classList.remove("active");
-
-    index++;
-    if (index >= images.length) index = 0;
-
+    let images = document.querySelectorAll(".carousel img");
+    let index = 0;
     images[index].classList.add("active");
-  }
+    function nextImage() {
+      images[index].classList.remove("active");
 
-  setInterval(nextImage, 2000);
+      index++;
+      if (index >= images.length) index = 0;
+
+      images[index].classList.add("active");
+    }
+
+    setInterval(nextImage, 2000);
+  });
 
   //text script
 </script>
