@@ -2,6 +2,7 @@
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import "@fontsource/merriweather";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <html lang="en">
@@ -11,6 +12,7 @@ import "@fontsource/merriweather";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Terms and Conditions</title>
+    <ViewTransitions />
   </head>
   <body>
     <header>

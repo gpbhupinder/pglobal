@@ -10,6 +10,7 @@ import Faq from "../components/Faq.astro";
 import Services from "../components/Services.astro";
 import HomeAbout from "../components/HomeAbout.astro";
 import "@fontsource/merriweather";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <html lang="en">
@@ -19,6 +20,7 @@ import "@fontsource/merriweather";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Phoenix Global</title>
+    <ViewTransitions />
   </head>
   <body>
     <header>
@@ -28,15 +30,15 @@ import "@fontsource/merriweather";
       <Hero />
       <Explore />
       <hr
-        class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25"
+        class="my-6 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25"
       />
       <Services />
       <hr
-        class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25"
+        class="my-6 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25"
       />
       <HomeAbout />
       <hr
-        class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25"
+        class="my-6 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25"
       />
     </main>
     <Footer />
