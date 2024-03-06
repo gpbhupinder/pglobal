@@ -1,11 +1,8 @@
----
-import { Image } from "astro:assets";
----
-
 <section>
   <div
-    class="justify-center items-center flex-1 max-w-screen-2xl px-6 p-6 mx-auto"
+    class="container justify-center items-center flex flex-col max-w-screen-2xl px-6 p-6 mx-auto"
   >
+    <h2 class="mb-6 py-4 text-center text-2xl font-bold">About Us</h2>
     <!-- About block 1 -->
     <div class="mb-16 flex flex-wrap">
       <div
@@ -16,7 +13,12 @@ import { Image } from "astro:assets";
           data-te-ripple-init
           data-te-ripple-color="light"
         >
-          <img loading="lazy" src="h3.jpg" class="w-full" alt="Louvre" />
+          <img
+            loading="lazy"
+            src="h3.jpg"
+            class="w-full h-80 xl:h-96"
+            alt="Louvre"
+          />
         </div>
       </div>
 
@@ -46,7 +48,12 @@ import { Image } from "astro:assets";
           data-te-ripple-init
           data-te-ripple-color="light"
         >
-          <img loading="lazy" src="h4.jpg" class="w-full" alt="Louvre" />
+          <img
+            loading="lazy"
+            src="h4.jpg"
+            class="w-full h-80 xl:h-96"
+            alt="Louvre"
+          />
         </div>
       </div>
 
