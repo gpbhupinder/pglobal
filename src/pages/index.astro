@@ -18,6 +18,9 @@ import "@fontsource/merriweather";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="preload" href="/h1.png" as="image" />
+    <link rel="preload" href="/h3.jpg" as="image" />
+
     <title>Phoenix Global</title>
   </head>
   <body>
@@ -26,11 +29,11 @@ import "@fontsource/merriweather";
     </header>
     <main>
       <Hero />
-      <Services />
+      <HomeAbout />
       <hr
         class="my-6 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25"
       />
-      <HomeAbout />
+      <Services />
       <hr
         class="my-6 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25"
       />
