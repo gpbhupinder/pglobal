@@ -34,7 +34,12 @@
 }
 h1, h2 {
   font-family: merriweather;
+  font-weight: bold;
   text-transform: uppercase;
+}
+
+h3,h4 {
+  font-weight:500
 }
 
 /* Hero classes */
