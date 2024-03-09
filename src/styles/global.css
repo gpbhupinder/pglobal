@@ -33,14 +33,14 @@
 	background: url("/left-globe-bg.png") no-repeat;
 }
 .globe-fix:before{
-content: '';
+    content: '';
     position: absolute;
     background: url(/left-globe-bg.png) no-repeat;
     margin-top: 100px;
     background-size: cover;
     width: 300px;
     height: 409px;
-    z-index: 9;
+    z-index: 1;
     left: 0;
     top: 45px;
     opacity: 0.5;
