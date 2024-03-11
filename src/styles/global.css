@@ -32,6 +32,21 @@
 .bg-globe{
 	background: url("/left-globe-bg.png") no-repeat;
 }
+.watermark{
+    position: relative;
+}
+.watermark:after{
+    background: url("/owner-bg.jpeg") no-repeat;
+    content: '';
+    position: absolute;
+    background-size: cover;
+    width: 300px;
+    height: 409px;
+    z-index: 1;
+    right: 0;
+    opacity: 0.4;
+
+}
 .globe-fix:before{
     content: '';
     position: absolute;
@@ -45,7 +60,7 @@
     top: 45px;
     opacity: 0.5;
 }
-h1, h2 {
+h1, h2,h3 {
   font-family: merriweather;
   font-weight: bold;
   text-transform: uppercase;
