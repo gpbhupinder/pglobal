@@ -1,0 +1,37 @@
+---
+import Navbar from "../components/Navbar.astro";
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Explore from "../components/Explore.astro";
+import LogoCloud from "../components/LogoCloud.astro";
+import Faq from "../components/Faq.astro";
+import Services from "../components/Services.astro";
+import HomeAbout from "../components/HomeAbout.astro";
+import "@fontsource/merriweather";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preload" href="/h1.png" as="image" />
+
+    <title>Phoenix Global</title>
+  </head>
+  <body>
+    <header>
+      <Navbar />
+    </header>
+    <main>
+      <h2>Thanks</h2>
+      <hr
+        class="my-6 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25"
+      />
+    </main>
+    <Footer />
+  </body>
+</html>

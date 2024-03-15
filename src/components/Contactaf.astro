@@ -375,7 +375,7 @@
             Kindly fill this form to send your valuable enquiries and questions
             to us
           </p>
-          <form id="cForm" method="post" class="mt-4">
+          <form id="cForm" class="mt-4">
             <div class="flex-1">
               <label class="block mb-2 text-sm text-gray-600">Full Name</label>
               <input
@@ -421,30 +421,33 @@
             >
               get in touch
             </button>
-            <div id="thanks" class="mt-4 text-green-500 font-bold hidden">
-              Thanks for your submission!
-            </div>
           </form>
+          <div
+            id="responseMessage"
+            class="p-4 text-green-700 font-bold text-center"
+          >
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <script>
-  const form = document.getElementById("cForm");
-  form.addEventListener("submit", async (event) => {
+  const form = document.getElementById("cForm") as HTMLFormElement;
+  form.addEventListener("submit", async function (event) {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget as HTMLFormElement);
-    const response = await fetch("/form.php", {
-      method: "POST",
-      body: formData,
-    });
-    if (response.ok) {
-      (event.currentTarget as HTMLFormElement).reset();
-      const thanks = document.getElementById("thanks");
-      thanks.classList.remove("hidden");
-    } else {
-      console.error("Error submitting form:", response.status);
+    const formData = new FormData(this);
+    try {
+      const response = await fetch("/contactform.php", {
+        method: "POST",
+        body: formData,
+      });
+      const responseData = await response.json();
+      document.getElementById("responseMessage").textContent =
+        responseData.message;
+    } catch (error) {
+      console.error("Error:", error);
     }
   });
 </script>
