@@ -413,7 +413,11 @@
               >
               </textarea>
             </div>
-
+            <div
+              class="g-recaptcha pt-4"
+              data-sitekey="6LeB7ZspAAAAAJGR3roU6vOxU2WL_nWZOyFkycil"
+            >
+            </div>
             <button
               type="submit"
               name="submit"
@@ -422,6 +426,11 @@
               get in touch
             </button>
           </form>
+          <div
+            id="recaptchaError"
+            class="text-red-500 p-4 font-bold text-center hidden"
+          >
+          </div>
           <div
             id="responseMessage"
             class="p-4 text-green-700 font-bold text-center"
@@ -434,18 +443,32 @@
 </section>
 
 <script>
+  //Form
   const form = document.getElementById("cForm") as HTMLFormElement;
+
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
+    const recaptchaResponse = grecaptcha.getResponse();
     const formData = new FormData(this);
+    formData.append("g-recaptcha-response", recaptchaResponse);
     try {
       const response = await fetch("/contactform.php", {
         method: "POST",
         body: formData,
       });
       const responseData = await response.json();
-      document.getElementById("responseMessage").textContent =
-        responseData.message;
+      const recaptchaError = document.getElementById("recaptchaError");
+      const responseMessage = document.getElementById("responseMessage");
+      recaptchaError.classList.add("hidden");
+      recaptchaError.textContent = "";
+      responseMessage.textContent = "";
+      if (responseData.message === "reCAPTCHA verification failed.") {
+        recaptchaError.classList.remove("hidden");
+        recaptchaError.textContent = "reCAPTCHA verification failed";
+      } else {
+        // Display the success message from the server
+        responseMessage.textContent = responseData.message;
+      }
     } catch (error) {
       console.error("Error:", error);
     }
